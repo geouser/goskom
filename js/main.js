@@ -7,6 +7,7 @@ window.params = {
 
 jQuery(document).ready(function($) {
 
+
     /*---------------------------
                                   ADD CLASS ON SCROLL
     ---------------------------*/
