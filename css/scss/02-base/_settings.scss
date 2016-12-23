@@ -5,12 +5,28 @@ html,
 body {
 	height: 100%;
 }
-
+body {
+    font-family: $g;
+}
+h2 {
+    font-family: $gb;
+    font-size: 30px;
+    font-weight: normal;
+    line-height: 40px;
+}
+b,
+strong {
+    font-family: $gb;
+    font-weight: normal;
+}
 
 // lAYOUT
 // ---------------------------
 .wrapper {
-	width: 1200px;
+	width: 960px;
 	margin: 0 auto;
 	text-align: center;
+}
+.section {
+    padding-top: 90px;
 }

@@ -1,0 +1,32 @@
+.button {
+    display: inline-block;
+    height: 50px;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-family: $gm;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    color: #fff;
+    background-color: $orange;
+    padding: 0 45px;
+    line-height: 50px;
+    border: 0;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #FFB350;
+    }
+
+    &--small {
+        height: 30px;
+        line-height: 30px;
+        font-size: 11px;
+        padding: 0 15px;
+    }
+
+    &--full {
+        width: 100%;
+        padding: 0;
+    }
+}

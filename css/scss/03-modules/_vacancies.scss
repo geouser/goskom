@@ -1,0 +1,67 @@
+.vacancies {
+    background-image: url(../images/vacancies.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    color: #fff;
+    padding-bottom: 170px;
+
+    .section-subtitle {
+        font-size: 18px;
+        margin-top: 15px;
+    }
+}
+
+.vacancies-box {
+    margin: 100px -15px 85px -15px;
+    @include flex($alignI: stretch, $justify: flex-start);
+}
+.vacancy {
+    width: -webkit-calc(33.3333% - 30px);
+    width: calc(33.3333% - 30px);
+    margin: 0 15px;
+    padding: 15px 30px;
+    background-color: rgba(0, 0, 0, .5);
+    list-style: none;
+    text-align: left;
+    margin-bottom: 30px;
+
+    li {
+        padding: 22px 0;
+        font-family: $gb;
+        font-size: 16px;
+        line-height: 30px;
+        padding-left: 35px;
+        position: relative;
+
+        &:not(:last-child) {
+            border-bottom: 1px solid rgba(255, 255, 255, .2);
+        }
+
+        &:before {
+            content: '';
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            top: 50%;
+            left: 8px;
+            margin-top: -10px;
+            background-size: contain;
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+        }
+    }
+
+    &__location:before {
+        background-image: url(../images/pin.png);
+    }
+
+    &__department:before {
+        background-image: url(../images/man.png);
+    }
+
+    &__position:before {
+        background-image: url(../images/badge.png);
+    }
+
+}
