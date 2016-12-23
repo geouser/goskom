@@ -91,6 +91,29 @@ jQuery(document).ready(function($) {
 
 
 
+
+    /*---------------------------
+                                  Team slider
+    ---------------------------*/
+    $('.team-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+        $('.slide').removeClass('active left right');
+        $(slick.$slides[nextSlide-1]).addClass('active left');
+        $(slick.$slides[nextSlide]).addClass('active');
+        $(slick.$slides[nextSlide+1]).addClass('active right');
+    });
+
+    $('.team-slider').slick({
+        centerMode: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        arrows: true,
+        dots: false,
+        infinite: false,
+        focusOnSelect: true
+    })
+
+
+
     /*----------------------------
                               SEND FORM
     -------------------------*/
