@@ -1,0 +1,103 @@
+.servicesSection {
+    padding: 95px 0;
+    background-position: 50% 50%;
+    -webkit-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+    h2 {
+        margin-bottom: 45px;
+    }
+}
+
+.services {
+    @include flex($alignI: flex-start);
+    &__list {
+        width: 320px;
+        padding: 28px;
+        background-color: #FFF;
+        list-style-type: none;
+        li {
+            display: block;
+            color: #313131;
+            padding: 12px 0;
+            font: 12px/24px $gb;
+            text-transform: uppercase;
+            border-top: 1px solid #E8E8E8;
+            text-align: left;
+            cursor: pointer;
+            &:first-of-type {
+                border: none;
+            }
+            &:hover,
+            &.active {
+                color: $orange;
+            }
+        }
+    }// list
+    &__info {
+        width: -webkit-calc(100% - 320px);
+        width: calc(100% - 320px);
+        padding-left: 40px;
+        text-align: left;
+        h3 {
+            text-transform: uppercase;
+            color: #fff;
+            font: 18px/40px $gb;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(0,0,0,.1);
+        }
+        p {
+            margin-top: 10px;
+            font: 14px/30px $g;
+            color: #fff;
+            strong {
+                font: 18px/30px $gb;
+                color: $green;
+                display: block;
+                margin-bottom: 6px;
+            }
+        }
+
+        &__tab__icons {
+            @include flex($alignI: flex-start);
+            padding: 17px 0;
+            margin: 17px 0 25px;
+            border-bottom: 1px solid rgba(0,0,0,.1);
+            border-top: 1px solid rgba(0,0,0,.1);
+            > div {
+                width: 33%;
+                i {
+                    display: block;
+                    width: 66px;
+                    height: 57px;
+                    margin: 0 auto 10px;
+                    text-align: center;
+                    img {
+                        max-width: 100%;
+                    }
+                }
+                span {
+                    display: block;
+                    text-align: center;
+                    color: $green;
+                    font: 14px/22px $gb;
+                    padding: 0 10px;
+                }
+            }
+        }
+    }//info
+
+    .question {
+        span {
+            font: 18px/40px $gb;
+            color: #FFF;
+            display: block;
+            text-align: center;
+        }
+        .button {
+            display: block;
+            margin: 10px auto 0;
+            padding: 0 20px;
+        }
+    }
+}

@@ -5,18 +5,18 @@
     z-index: 100;
     
     .wrapper {
-        @include flex();
+        @include flex($alignI : flex-start);
         padding-top: 14px;
-        padding-bottom: 16px;
         border-bottom: 1px solid rgba(255,255,255, .2);
     }
 
     &.hasScrolled {
-        top: -50px;
-        background-color: rgba(0,0,0,.8);   
+        background-color: #118944;   
         .wrapper {
-            padding-bottom: 12px;
             border: none;
+            .mainNav ul {
+                background-color: #0F7E3E;
+            }
         }
     }
 
@@ -32,20 +32,25 @@
 /*  NAV STYLES  */
 .mainNav {
     ul {
-        margin-top: 20px;
+        margin-top: 9px;
         list-style-type: none;
         text-align: center;
+        padding-top: 11px;
+        padding-bottom: 16px;
         li {
             display: inline-block;
             vertical-align: middle;
             border-left: 1px solid rgba(255,255,255, .2);
+            &:first-of-type {
+                border: none;
+            }
             a {
                 display: inline-block;
                 vertical-align: middle;
                 padding-bottom: 2px;
                 font: 12px/20px $g;
                 color: #FFF;
-                margin: 0 18px 0 20px;
+                margin: 0 16px 0 18px;
                 @include transition(all, .2s);
                 &:hover {
                     color: $orange;
@@ -77,13 +82,15 @@
 
 .logo {
     display: block;
-    width: 230px;
+    width: 240px;
     padding: 42px 0 0 72px;
-    background-image: url("../images/logo.svg");
+    background-image: url("../images/logo.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
     span {
         display: inline-block;
         color: #FFF;
-        font-size: 9px;
+        font-size: 8.5px;
         line-height: 14px;
         text-align: left;
     }
