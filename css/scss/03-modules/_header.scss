@@ -140,8 +140,9 @@
         text-align: left;
     }
     @include m1000 {
+        display: block;
         width: 226px;
-        margin-bottom: 20px;
+        margin: 0 auto 20px;
         span {
             font-size: 7px;
         }
