@@ -12,6 +12,11 @@
     margin-bottom: 0;
     margin-top: 85px;
 
+    .slick-dots li button:before {
+        color: #fff;
+        font-size: 16px;
+    }
+
     .slick-arrow {
         width: 60px;
         height: 120px;
@@ -52,6 +57,10 @@
 
     .slick-track {
         padding: 70px 0;
+
+        @media (max-width: 991px) {
+            padding: 20px 0 0;
+        }
     }
 
     .slide__image {
@@ -81,26 +90,42 @@
         font-size: 22px;
         font-family: $gb;
         margin-bottom: 8px;
-        opacity: 0;
-        visibility: hidden;
         -webkit-transition: all 0.5s ease;
         -o-transition: all 0.5s ease;
         transition: all 0.5s ease;
+
+        @media (min-width: 992px) {
+            opacity: 0;
+            visibility: hidden;
+        }
     }
 
     .slide__position {
         font-size: 17px;
         font-family: $gl;
-        opacity: 0;
-        visibility: hidden;
         -webkit-transition: all 0.5s ease;
         -o-transition: all 0.5s ease;
         transition: all 0.5s ease;
+
+        @media (min-width: 992px) {
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+
+    .slide {
+        @media (max-width: 991px) {
+            margin: 0 15px;
+        }
+
+        @media (max-width: 500px) {
+            margin: 0 30px;
+        }
     }
 
 
 
-    @media (min-width: 990px) {
+    @media (min-width: 992px) {
         .slide {
             -webkit-transition: all 0.5s ease;
             -o-transition: all 0.5s ease;

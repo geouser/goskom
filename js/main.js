@@ -204,6 +204,20 @@ jQuery(document).ready(function($) {
     });
 
 
+    /*---------------------------
+                                  Steps tabs
+    ---------------------------*/
+    $('.steps-control').on('click', function(event) {
+        event.preventDefault();
+        if ( !$(this).hasClass('active-button') ) {
+            $('.steps-control').removeClass('active-button');
+            $('.step').removeClass('active');
+
+            $( $(this).attr('href') ).fadeIn().addClass('active');
+            $(this).addClass('active-button');    
+        }
+    });
+
 
     /*---------------------------
                                   Team slider
@@ -222,7 +236,49 @@ jQuery(document).ready(function($) {
         arrows: true,
         dots: false,
         infinite: false,
-        focusOnSelect: true
+        focusOnSelect: true,
+
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    centerMode: false,
+                    arrows: false,
+                    dots: true,
+                    autoplay: true,
+                    autoplaySpeed: 4000,
+                    infinitie: true
+                }
+            },
+            {
+                breakpoint: 720,
+                settings: {
+                    centerMode: false,
+                    arrows: false,
+                    dots: true,
+                    autoplay: true,
+                    autoplaySpeed: 4000,
+                    infinitie: true,
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+
+                }
+            },
+            {
+                breakpoint: 500,
+                settings: {
+                    centerMode: false,
+                    arrows: false,
+                    dots: true,
+                    autoplay: true,
+                    autoplaySpeed: 4000,
+                    infinitie: true,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+
+                }
+            }
+        ]
     })
 
 

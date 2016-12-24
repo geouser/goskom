@@ -1,0 +1,49 @@
+.popup {
+    width: 340px;
+    background-color: #fff;
+    margin: 0 auto;
+    padding: 45px 40px 40px;
+    position: relative;
+    text-align: center;
+
+    @media (max-width: 500px) {
+        width: 100%;
+    }
+
+    .mfp-close {
+        left: 100%;
+        top: 0;
+        right: auto;
+        color: #fff;
+        line-height: normal;
+
+        @media (max-width: 500px) {
+            right: 0;
+            left: auto;
+            color: #000;
+        }
+    }
+
+    input,
+    textarea {
+        margin-bottom: 15px;
+    }
+
+    .title {
+        font-size: 24px;
+        font-family: $gb;
+        color: $green;
+        text-transform: uppercase;
+        margin-bottom: 5px;
+    }
+
+    .subtitle {
+        font-size: 18px;
+        font-family: $gl;
+        margin-bottom: 20px;
+    }
+
+    .button {
+        box-shadow: 0px 18px 38px 0px rgba(0, 0, 0, 0.11);
+    }
+}

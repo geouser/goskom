@@ -1,0 +1,246 @@
+.steps {
+    color: #191919;
+    background-image: url(../images/steps_bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    padding-bottom: 100px;
+
+    h2 {
+        span {
+            color: $green;
+        }
+    }
+
+    &-navigation {
+        position: relative;
+        padding-bottom: 160px;
+        margin-top: 83px;
+        margin-bottom: 35px;
+
+        @media (max-width: 1000px) {
+            padding-bottom: 100px;
+        }
+
+        &:before {
+            content: '';
+            width: 921px;
+            height: 342px;
+            position: absolute;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            -o-transform: translateX(-50%);
+            transform: translateX(-50%);
+            top: -254px;
+            background-image: url(../images/steps.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+
+            @media (max-width: 1000px) {
+                display: none;
+            }
+        }
+
+        @media (max-width: 1000px) {
+            border-top: 3px solid $green;
+        }
+
+        .steps-control {
+            position: absolute;
+            -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            -o-transform: translateX(-50%);
+            transform: translateX(-50%);
+            width: 50px;
+            height: 50px;
+            background-color: $lime;
+            text-align: center;
+            line-height: 50px;
+            color: #fff;
+            font-family: $gb;
+            font-size: 24px;
+            -webkit-transition: all 0.3s ease;
+            -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border-radius: 50%;
+
+            @media (max-width: 1000px) {
+                top: 20px!important;
+                width: 40px;
+                height: 40px;
+                line-height: 40px;
+            }
+
+            &:hover {
+                opacity: .8;
+            }
+
+            &.active-button {
+                background-color: $orange;
+
+                @media (max-width: 1000px) {
+                    &:before {
+                        content: '';
+                        width: 0;
+                        height: 0;
+                        border-style: solid;
+                        border-width: 15px 15px 0 15px;
+                        border-color: $green transparent transparent transparent;
+                        position: absolute;
+                        top: -20px;
+                        left: 50%;
+                        margin-left: -15px;
+                    }
+                }
+            }
+        }
+
+
+        a:first-child {
+            left: 16.6666%;
+        }
+
+        a:nth-child(2) {
+            left: 33.3333%;
+            top: 80px;
+        }
+
+        a:nth-child(3) {
+            left: 50%;
+            top: 105px;
+        }
+
+        a:nth-child(4) {
+            left: 66.6666%;
+            top: 80px;
+        }
+
+        a:nth-child(5) {
+            left: 83.3333%;
+        }
+    }
+}
+
+
+.step {
+    -webkit-transform: translateY(100px);
+    -ms-transform: translateY(100px);
+    -o-transform: translateY(100px);
+    transform: translateY(100px);
+    position: relative;
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+
+
+    &.active {
+        -webkit-transition: opacity 0.4s ease, transform 0.4s ease;
+        -o-transition: opacity 0.4s ease, transform 0.4s ease;
+        transition: opacity 0.4s ease, transform 0.4s ease;
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+        transform: translateY(0);
+        height: auto;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &:before {
+        content: '';
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 17.5px 20px 17.5px;
+        border-color: transparent transparent #fff transparent;
+        position: absolute;
+        bottom: 100%;
+        z-index: 1;
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+
+    &#step-1:before {
+        left: 16.66666%;
+    }
+    &#step-2:before {
+        left: 33.3333%;
+    }
+    &#step-3:before {
+        left: 50%;
+    }
+    &#step-4:before {
+        left: 66.666%;
+    }
+    &#step-5:before {
+        left: 83.3333%;
+    }
+
+
+    &__header {
+        background-color: #fff;
+        padding: 20px 0;
+        margin-bottom: 45px;
+        @include flex($alignI: center);
+        -webkit-filter: drop-shadow(0px 10px 30px rgba(0, 0, 0, 0.16));
+                filter: drop-shadow(0px 10px 30px rgba(0, 0, 0, 0.16));
+
+        .column {
+            width: 33.33333%;
+            text-align: left;
+            padding: 0 20px;
+
+            @media (max-width: 767px) {
+                width: 100%;
+            }
+
+            &:nth-child(2) {
+                border-right: 1px solid #e8e8e8;
+                border-left: 1px solid #e8e8e8;
+                padding: 25px 20px;
+
+                @media (max-width: 767px) {
+                    border: 0;
+                }
+            }
+
+            h3 {
+                font-family: $gb;
+                font-weight: normal;
+                color: $green;
+                font-size: 18px;
+                text-transform: uppercase;
+
+                span {
+                    color: #191919;
+                }
+            }
+
+            p {
+                font-size: 12px;
+                font-family: $g;
+                line-height: 24px;
+                color: #000;
+            }
+        }
+    }
+    
+
+    &__content {
+        text-align: left;
+        font-size: 13px;
+        font-family: $g;
+        line-height: 24px;
+
+        p:not(:last-child) {
+            margin-bottom: 45px;
+        }
+    }
+
+
+}

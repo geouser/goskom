@@ -6,6 +6,10 @@
     color: #fff;
     padding-bottom: 170px;
 
+    @media (max-width: 991px) {
+        padding-bottom: 90px;
+    }
+
     .section-subtitle {
         font-size: 18px;
         margin-top: 15px;
@@ -15,6 +19,10 @@
 .vacancies-box {
     margin: 100px -15px 85px -15px;
     @include flex($alignI: stretch, $justify: flex-start);
+
+    @media (max-width: 991px) {
+        margin-bottom: 20px;
+    }
 }
 .vacancy {
     width: -webkit-calc(33.3333% - 30px);
@@ -26,6 +34,19 @@
     text-align: left;
     margin-bottom: 30px;
 
+    @media (max-width: 991px) {
+        width: -webkit-calc(50% - 30px);
+        width: calc(50% - 30px);
+
+        &:last-child {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 767px) {
+        width: 100%;
+    }
+
     li {
         padding: 22px 0;
         font-family: $gb;
@@ -33,6 +54,12 @@
         line-height: 30px;
         padding-left: 35px;
         position: relative;
+
+        @media (max-width: 767px) {
+            font-family: $g;
+            line-height: normal;
+            padding: 15px 0 15px 35px;
+        }
 
         &:not(:last-child) {
             border-bottom: 1px solid rgba(255, 255, 255, .2);
