@@ -18,6 +18,9 @@
         text-align: center;
         color: #FFF;
         background-color: rgba(0,0,0,.5);
+        @media (max-width: 700px) {
+            padding: 30px 15px;
+        }
         p {
             font-size: 24px;
             line-height: 36px;
@@ -27,16 +30,51 @@
                 font-family: $gb;
                 display: block;
             }
-        }
-        small {
-            display: block;
-            text-align: center;
-            font: 17px $gl;
-            margin-top: 10px;
+            small {
+                display: block;
+                text-align: center;
+                font: 17px $gl;
+                margin-top: 10px;
+            }
+            @include m1000 {
+                font-size: 21px;
+                line-height: 30px;
+                span {
+                    font-size: 26px;
+                }
+                small {
+                    font-size: 16px;
+                }
+            }
+            @media (max-width: 700px) {
+                font-size: 16px;
+                line-height: 1.2;
+                span {
+                    font-size: 20px;
+                }
+                small {
+                    font-size: 12px;
+                }
+            }
+            @media (max-width: 500px) {
+                font-size: 14px;
+                line-height: 1.2;
+                margin-bottom: 10px;
+                display: block;
+                span {
+                    font-size: 18px;
+                }
+                small {
+                    font-size: 10px;
+                }
+            }
         }
         .button {
             margin-top: 30px;
             padding:  0 20px;
+            @media (max-width: 500px) {
+                margin-top: 10px;
+            }
         }
     }
 }
@@ -53,4 +91,12 @@
     -webkit-background-size: 100% 100%;
          -o-background-size: 100% 100%;
             background-size: 100% 100%;
+    @media (max-width: 800px) {
+        bottom: 20px;
+        width: 28px;
+        height: 66px;
+    }
+    @media (max-width: 700px) {
+        display: none;
+    }
 }

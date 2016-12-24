@@ -6,6 +6,12 @@
             background-size: cover;
     h2 {
         margin-bottom: 45px;
+        @media (max-width: 700px) {
+            margin-bottom: 30px;
+        }
+    }
+    @media (max-width: 800px) {
+         padding: 60px 0;
     }
 }
 
@@ -16,6 +22,14 @@
         padding: 28px;
         background-color: #FFF;
         list-style-type: none;
+        @media (max-width: 900px) {
+            width: 250px;
+            padding: 20px;
+        }
+        @media (max-width: 760px) {
+            width: 100%;
+            padding: 10px 20px;
+        }
         li {
             display: block;
             color: #313131;
@@ -32,6 +46,13 @@
             &.active {
                 color: $orange;
             }
+            @media (max-width: 900px) {
+                font-size: 11px;
+                line-height: 20px;
+            }
+            @media (max-width: 760px) {
+                padding: 4px 0;
+            }
         }
     }// list
     &__info {
@@ -40,12 +61,26 @@
         padding-left: 40px;
         text-align: left;
         min-height: 745px;
+        @media (max-width: 900px) {
+            min-height: auto;
+            padding-left: 20px;
+            width: -webkit-calc(100% - 250px);
+            width: calc(100% - 250px);
+        }
+        @media (max-width: 760px) {
+            width: 100%;
+            margin-top: 30px;
+            padding-left: 0;
+        }
         h3 {
             text-transform: uppercase;
             color: #fff;
             font: 18px/40px $gb;
             padding-bottom: 10px;
             border-bottom: 1px solid rgba(0,0,0,.1);
+            @media (max-width: 700px) {
+                font: 16px/32px $gb;
+            }
         }
         p {
             margin-top: 10px;
@@ -56,6 +91,14 @@
                 color: $green;
                 display: block;
                 margin-bottom: 6px;
+            }
+            @media (max-width: 700px) {
+                font-size: 12px;
+                line-height: 24px;
+                strong {
+                    font-size: 16px;
+                    line-height: 24px;
+                }
             }
         }
         &__tab {
@@ -76,6 +119,9 @@
             margin: 17px 0 25px;
             border-bottom: 1px solid rgba(0,0,0,.1);
             border-top: 1px solid rgba(0,0,0,.1);
+            @media (max-width: 500px) {
+                display: block;
+            }
             > div {
                 width: 33%;
                 i {
@@ -94,6 +140,18 @@
                     color: $green;
                     font: 14px/22px $gb;
                     padding: 0 10px;
+                    @media (max-width: 900px) {
+                        font-size: 12px;
+                        line-height: 20px;
+                    }
+                }
+                 @media (max-width: 500px) {
+                    width: 260px;
+                    margin: 10px auto 20px;
+                    text-align: center;
+                    span {
+                        font-size: 14px;
+                    }
                 }
             }
         }
