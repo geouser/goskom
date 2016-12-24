@@ -151,6 +151,23 @@ jQuery(document).ready(function($) {
         var mydoughnutChart = new Chart(ctx).Doughnut(doughnutData, doughnutOptions);
 
 
+
+    /*---------------------------
+                                PAGE ANCHORS
+    ---------------------------*/
+    $('.services__list li:first-of-type').addClass('active');
+    $('.services__info__tab:first-of-type').addClass('active');
+
+    $('.services__list li').click(function() {
+        var target = $(this).data('service');
+
+        $('.services__list li').removeClass('active');
+        $(this).addClass('active');
+        $('.services__info__tab').removeClass('active');
+        $('.' + target + '').addClass('active');
+
+    });
+
     /*---------------------------
                                   Magnific popup
     ---------------------------*/

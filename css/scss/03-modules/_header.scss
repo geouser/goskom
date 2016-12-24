@@ -1,7 +1,7 @@
          
 .mainHeader {
     @include position(fixed, 0, 0, auto, 0);
-    @include transition(all, .4s);
+    @include transition(all, .2s);
     z-index: 100;
     
     .wrapper {
@@ -37,6 +37,7 @@
         text-align: center;
         padding-top: 11px;
         padding-bottom: 16px;
+        @include transition(all, .2s);
         li {
             display: inline-block;
             vertical-align: middle;
