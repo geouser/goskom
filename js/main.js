@@ -172,6 +172,20 @@ jQuery(document).ready(function($) {
     });
 
 
+    /*---------------------------
+                                  Interactive map
+    ---------------------------*/
+    $('.pin').on('click', function(event) {
+        event.preventDefault();
+        event.stopImmediatePropagation();
+        if ( $(this).hasClass('active') ) {
+            $(this).removeClass('active')
+        } else {
+            $('.pin').removeClass('active')
+            $(this).addClass('active');
+        }
+    });
+
 
 
     /*---------------------------
