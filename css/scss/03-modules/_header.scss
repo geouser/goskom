@@ -1,26 +1,93 @@
          
 .mainHeader {
-    @include position(absolute, 0, auto, auto, 0);
+    @include position(fixed, 0, 0, auto, 0);
     @include transition(all, .4s);
+    z-index: 100;
     
-        /*.................media.............*/
-        @include m800 {
-            @include position(fixed, 0, auto, auto, -100%);
+    .wrapper {
+        @include flex();
+        padding-top: 14px;
+        padding-bottom: 16px;
+        border-bottom: 1px solid rgba(255,255,255, .2);
+    }
+
+    &.hasScrolled {
+        top: -50px;
+        background-color: rgba(0,0,0,.8);   
+        .wrapper {
+            padding-bottom: 12px;
+            border: none;
         }
-        /*.............end media..............*/
+    }
+
+    /*.................media.............*/
+    @include m800 {
+        @include position(fixed, 0, auto, auto, -100%);
+    }
+    /*.............end media..............*/
 }
 
 
 /* ------------------------------------ */
 /*  NAV STYLES  */
 .mainNav {
-            /*.................media.............*/
-            @include m800 { 
+    ul {
+        margin-top: 20px;
+        list-style-type: none;
+        text-align: center;
+        li {
+            display: inline-block;
+            vertical-align: middle;
+            border-left: 1px solid rgba(255,255,255, .2);
+            a {
+                display: inline-block;
+                vertical-align: middle;
+                padding-bottom: 2px;
+                font: 12px/20px $g;
+                color: #FFF;
+                margin: 0 18px 0 20px;
+                @include transition(all, .2s);
+                &:hover {
+                    color: $orange;
+                }
             }
-            /*.............end media.............*/
+        }
+    }
+
+    text-align: right;
+    color: #FFF;
+    .button {
+        margin-left: 18px;
+        font-size: 11px;
+        padding: 0 17px;
+        height: 30px;
+        line-height: 30px;
+    }
+    .tel {
+        color: #FFF;
+        font: 14px/14px $gm;
+    }
+    
+    /*.................media.............*/
+    @include m800 { 
+    }
+    /*.............end media.............*/
 }
 
 
+.logo {
+    display: block;
+    width: 230px;
+    padding: 42px 0 0 72px;
+    background-image: url("../images/logo.svg");
+    span {
+        display: inline-block;
+        color: #FFF;
+        font-size: 9px;
+        line-height: 14px;
+        text-align: left;
+    }
+}
 
 
 /* ------------------------------------ */

@@ -1,0 +1,103 @@
+.implementationSection {
+    padding: 95px 0;
+    background-position: 50% 50%;
+    -webkit-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+    h2 {
+        margin-bottom: 55px;
+    }
+    p {
+        text-align: left;
+        font: 12px/24px $gl;
+        color: #FFF;
+        span {
+            display: block;
+            font: 14px/30px $gb;
+            color: $greenL;
+            margin-bottom: 10px;
+        }
+        + p {
+            margin-top: 50px;
+        }
+    }
+    .flexTwoSides {
+        > div:nth-of-type(1) {
+            padding-right: 20px;
+        }
+        > div:nth-of-type(2) {
+            padding-left: 20px;
+        }
+    }
+}
+
+.aboutUsNum {
+    background-color: rgba(0,0,0, .4);
+    padding: 28px;
+    text-align: left;
+    list-style-type: none;
+    margin-bottom: 60px;
+    span {
+        display: block;
+        color: $greenL;
+        font-size: 18px;
+        font-family: $gb;
+        margin-bottom: 12px;
+    }
+    li {
+        font: 14px/30px $gl;
+        display: block;
+        margin-bottom: 4px;
+        color: #FFF;
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+        span {
+            font-family: $gb;
+        }
+    }
+}
+
+.diagram {
+    height: 440px;
+    width: 460px;
+    position: relative;
+    background-image: url("../images/diagram.png");
+    -webkit-background-size: 100% 100%;
+         -o-background-size: 100% 100%;
+            background-size: 100% 100%;
+    &__item {
+        position: absolute;
+        color: #FFF;
+        width: 125px;
+        text-transform: uppercase;
+        font: 12px/18px $gb;
+        text-align: center;
+        &--1 {
+            font-size: 16px;
+            top: 75px;
+            left: 90px;
+        }
+        &--2 {
+            font-size: 16px;
+            top: 75px;
+            left: 247px;
+        }
+        &--3 {
+            top: 205px;
+            left: 322px;
+        }
+        &--4 {
+            top: 336px;
+            left: 247px;
+        }
+        &--5 {
+            top: 345px;
+            left: 90px;
+        }
+        &--6 {
+            top: 194px;
+            left: 11px;
+        }
+    }
+}

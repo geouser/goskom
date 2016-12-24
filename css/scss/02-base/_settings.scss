@@ -8,6 +8,10 @@ body {
 body {
     font-family: $g;
 }
+h1 {
+    font: 60px/72px $gb;
+    color: #FFF;
+}
 h2 {
     font-family: $gb;
     font-size: 30px;
@@ -19,6 +23,9 @@ strong {
     font-family: $gb;
     font-weight: normal;
 }
+.white {
+    color: #FFF;
+}
 
 // lAYOUT
 // ---------------------------
@@ -29,4 +36,11 @@ strong {
 }
 .section {
     padding-top: 90px;
+}
+
+.flexTwoSides {
+    @include flex();
+    > div {
+        width: 50%;
+    }
 }

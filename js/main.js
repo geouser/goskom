@@ -69,6 +69,87 @@ jQuery(document).ready(function($) {
     });
 
 
+        
+        // ======================================================
+        // Doughnut Chart
+        // ======================================================
+
+        // Doughnut Chart Options
+        var doughnutOptions = {
+            //Boolean - Whether we should show a stroke on each segment
+            segmentShowStroke : false,
+            
+            //String - The colour of each segment stroke
+            segmentStrokeColor : "#fff",
+            
+            //Number - The width of each segment stroke
+            segmentStrokeWidth : 2,
+            
+            //The percentage of the chart that we cut out of the middle.
+            percentageInnerCutout : 70,
+            
+            //Boolean - Whether we should animate the chart 
+            animation : true,
+            
+            //Number - Amount of animation steps
+            animationSteps : 150,
+            
+            //String - Animation easing effect
+            animationEasing : "easeOutBounce",
+            
+            //Boolean - Whether we animate the rotation of the Doughnut
+            animateRotate : true,
+
+            //Boolean - Whether we animate scaling the Doughnut from the centre
+            animateScale : true,
+            
+            //Function - Will fire on animation completion.
+            onAnimationComplete : null,
+
+            tooltipFillColor: "rgba(0,0,0,0.8)",
+
+            tooltipEvents: ["mousemove", "touchstart", "touchmove", "load"],
+
+            onAnimationComplete: function()
+            {
+                this.showTooltip(this.segments, true); 
+            },
+
+            tooltipEvents: [],
+
+            showTooltips: true
+
+        }
+
+
+        // Doughnut Chart Data
+        var doughnutData = [
+            {
+                value : 280,
+                color : "#FF9711"
+            },
+            {
+                value : 200,
+                color : "#EEF7E2"
+            },
+            {
+                value : 30,
+                color : "#D6DF24"
+            },
+            {
+                value: 510,
+                color:"#118844"
+            }
+
+        ]
+
+
+        //Get the context of the Doughnut Chart canvas element we want to select
+        var ctx = document.getElementById("doughnutChart").getContext("2d");
+
+        // Create the Doughnut Chart
+        var mydoughnutChart = new Chart(ctx).Doughnut(doughnutData, doughnutOptions);
+
 
     /*---------------------------
                                   Magnific popup

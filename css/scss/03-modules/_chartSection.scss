@@ -1,0 +1,121 @@
+.chartSection {
+    padding: 95px 0;
+    background-position: 50% 50%;
+    -webkit-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+}
+
+.chart {
+    margin-top: 40px;
+    
+    &__info {
+        padding-top: 40px;
+        text-align: right;
+        &__list {
+            list-style-type: none;
+            text-align: left;
+            li {
+                text-align: left;
+                padding: 30px 0 24px 0;
+                border-bottom: 1px solid rgba(0,0,0,.1);
+                
+                &:last-of-type {
+                    border: none;
+                }
+
+                i {
+                    width: 62px;
+                    height: 50px;
+                    display: inline-block;
+                    vertical-align: top;
+                    text-align: center;
+                    img {
+                        max-width: 100%;
+                        max-height: 100%;
+                    }
+                }
+
+                p {
+                    display: inline-block;
+                    vertical-align: top;
+                    max-width: calc(100% - 70px);
+                    padding-left: 22px;
+                    color: #FFF;
+                    font-size: 18px;
+                    line-height: 30px;
+                    font-family: $gl;
+                    span {
+                        color: $green;
+                        font-family: $gb;
+                    }
+                }
+            }
+        }
+        &__click {
+            margin-right: -60px;
+            color: #FFF;
+            margin-top: 34px;
+            width: 210px;
+            font: 16px/24px $gl;
+            display: inline-block;
+        }
+    }// chart info
+    
+    &__chart {
+        padding-left: 50px;
+        position: relative; 
+        
+        &__text {
+            position: absolute;
+            width: 265px;
+            top: 166px;
+            left: 132px;
+            color: #FFF;
+            font: 18px/24px $gl;
+            span {
+                text-transform: uppercase;
+                font: 22px/30px $gb;
+            }
+        }
+
+        &__explain {
+            margin-left: 110px;
+            list-style-type: none;
+            margin-top: 28px;
+            li {
+                display: block;
+                color: #FFF;
+                font: 16px $gm;
+                text-align: left;
+                margin-bottom: 20px;
+                &:before {
+                    display: inline-block;
+                    vertical-align: middle;
+                    margin-right: 18px;
+                    content: "";
+                    width: 20px;
+                    height: 20px;
+                    background-color: #FFF;
+                    margin-top: -2px;
+                }
+                &.greenLabel {
+                    &:before {
+                        background-color: $green;
+                    }
+                }
+                &.orangeLabel {
+                    &:before {
+                        background-color: $orange;
+                    }
+                }
+                &.yellowLabel {
+                    &:before {
+                        background-color: $yellow;
+                    }
+                }
+            }
+        }
+    }// chart chart
+
+}// chart block
