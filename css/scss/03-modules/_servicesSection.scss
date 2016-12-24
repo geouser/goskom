@@ -39,6 +39,7 @@
         width: calc(100% - 320px);
         padding-left: 40px;
         text-align: left;
+        min-height: 745px;
         h3 {
             text-transform: uppercase;
             color: #fff;
@@ -57,7 +58,18 @@
                 margin-bottom: 6px;
             }
         }
-
+        &__tab {
+            display: none;
+            @include transition(all, .2s);
+            &.active {
+                display: block;
+                @include transition(all, .4s);
+                -webkit-animation: left .8s;
+                   -moz-animation: left .8s;
+                     -o-animation: left .8s;
+                        animation: left .8s;
+            }
+        }
         &__tab__icons {
             @include flex($alignI: flex-start);
             padding: 17px 0;
@@ -99,5 +111,16 @@
             margin: 10px auto 0;
             padding: 0 20px;
         }
+    }
+}
+
+@keyframes left {
+  0% {
+        transform: translateY(50px);
+        opacity: 0;
+  }
+  100% { 
+        transform: translateY(0px);
+        opacity: 1;
     }
 }
